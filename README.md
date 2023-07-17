@@ -4,7 +4,7 @@
 This package facilitates the prediction of composition data values using arbitrary non-compositional models. 
 The purpose is to avoid issues associated with transformation, zero values, data imputation, and other challenges when predicting compositional data.
 
-The package works by optimizing a simple auxiliary model on top of your primary model. 
+The package works by optimizing a simple auxiliary model on top of your raw model prediction values. 
 This optimized model is similar to a simple neural network. 
 It includes a series of weights and biases (like a regression), which map input values to the outputs.
 The optimized model includes an activation function before the output. Using an appropriate function, predictions may be constrained to a compositional scale.
