@@ -20,7 +20,7 @@ imptron_train(
 
 \item{method}{Optimization method, most likely from \link{optim}.}
 
-\item{act}{Optional activation function to pass through after summing weights and biases of perceptrons.}
+\item{act}{Optional activation function to pass through after summing weights and biases of perceptrons. See functions included in \link{activations} or provide your own.}
 
 \item{...}{Additional arguments to pass to the activation function.}
 
@@ -30,7 +30,7 @@ imptron_train(
 A list with the \link{optim} output and other arguments specified in the call.
 }
 \description{
-Another shitty wrapper for \link{optim}. This one optimizes the mapping between two matrices without any interaction between perceptrons until the
+Another wrapper for \link{optim}. This one optimizes the mapping between two matrices without any interaction between perceptrons until the
 final activation function, if specified.
 }
 \details{

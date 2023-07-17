@@ -23,7 +23,7 @@ ptron_train(
 
 \item{method}{Optimization method, most likely from \link{optim}.}
 
-\item{act}{Optional activation function to pass through after summing weights and biases of perceptrons.}
+\item{act}{Optional activation function to pass through after summing weights and biases of perceptrons. See functions included in \link{activations} or provide your own.}
 
 \item{...}{Additional arguments to pass to the activation function.}
 
@@ -33,7 +33,7 @@ ptron_train(
 A list with the \link{optim} output and other arguments specified in the call.
 }
 \description{
-A shitty wrapper for \link{optim}, which will evaluate optimization of weights and biases to fit one matrix to another using perceptrons.
+A wrapper for \link{optim}, which will evaluate optimization of weights and biases to fit one matrix to another using perceptrons.
 }
 \details{
 This function optimizes weights and biases of perceptrons to map input matrix \code{x} to \code{y}. Perceptrons are densely connected to all inputs and outputs.

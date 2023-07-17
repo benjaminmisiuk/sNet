@@ -9,7 +9,7 @@ imptron(x, act = NULL, param = c(rep(1, ncol(x)), rep(0, ncol(x))), ...)
 \arguments{
 \item{x}{Matrix of input values.}
 
-\item{act}{Optional activation function to pass through after summing weights and bias.}
+\item{act}{Optional activation function to pass through after summing weights and bias. See functions included in \link{activations} or provide your own.}
 
 \item{param}{Vector of weights and biases to be optimized (e.g., using \link{optim}). The first \code{ncol(x)} are weights, and the remaining
 are biases. This is normally taken from the output of \link{imptron_train}.}

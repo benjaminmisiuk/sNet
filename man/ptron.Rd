@@ -17,7 +17,7 @@ ptron(
 
 \item{units}{Vector. Number of hidden densely connected perceptron units.}
 
-\item{act}{Optional activation function to pass through after summing weights and bias.}
+\item{act}{Optional activation function to pass through after summing weights and bias. See functions included in \link{activations} or provide your own.}
 
 \item{param}{Vector of weights and biases to be optimized (e.g., using \link{optim}). The first \code{ncol(mat) * units} are weights, and the remaining
 are biases for each \code{unit}. This is normally tkaen from the output of \link{ptron_train}.}
