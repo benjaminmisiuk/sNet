@@ -9,7 +9,7 @@
 #' @param units Vector. Number of hidden densely connected perceptron units.
 #' @param method Optimization method, most likely from [optim].
 #' @param oprim_control List of control arguments to pass to [optim].
-#' @param act Optional activation function to pass through after summing weights and biases of perceptrons.
+#' @param act Optional activation function to pass through after summing weights and biases of perceptrons. See functions included in [activations] or provide your own.
 #' @param ... Additional arguments to pass to the activation function.
 #' 
 #' @return A list with the [optim] output and other arguments specified in the call.
@@ -45,7 +45,7 @@ ptron_train <- function(x, y, units = ncol(x), method = 'Nelder-Mead', optim_con
 #' @param y Target matrix.
 #' @param method Optimization method, most likely from [optim].
 #' @param oprim_control List of control arguments to pass to [optim].
-#' @param act Optional activation function to pass through after summing weights and biases of perceptrons.
+#' @param act Optional activation function to pass through after summing weights and biases of perceptrons. See functions included in [activations] or provide your own.
 #' @param ... Additional arguments to pass to the activation function.
 #' 
 #' @return A list with the [optim] output and other arguments specified in the call.

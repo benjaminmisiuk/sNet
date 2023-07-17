@@ -7,7 +7,7 @@
 #' 
 #' @param x Matrix of input values.
 #' @param units Vector. Number of hidden densely connected perceptron units.
-#' @param act Optional activation function to pass through after summing weights and bias.
+#' @param act Optional activation function to pass through after summing weights and bias. See functions included in [activations] or provide your own.
 #' @param param Vector of weights and biases to be optimized (e.g., using [optim]). The first `ncol(mat) * units` are weights, and the remaining
 #' are biases for each `unit`. This is normally tkaen from the output of [ptron_train].
 #' @param ... Additional arguments to pass to the activation function.
@@ -35,7 +35,7 @@ ptron <- function(x, units = ncol(x), act = NULL, param = c(rep(1, ncol(x) * uni
 #' an activation function (such as found in [activations]). These parameters can be taken from the output of [imptron_train].
 #' 
 #' @param x Matrix of input values.
-#' @param act Optional activation function to pass through after summing weights and bias.
+#' @param act Optional activation function to pass through after summing weights and bias. See functions included in [activations] or provide your own.
 #' @param param Vector of weights and biases to be optimized (e.g., using [optim]). The first `ncol(x)` are weights, and the remaining
 #' are biases. This is normally taken from the output of [imptron_train].
 #' @param ... Additional arguments to pass to the activation function.

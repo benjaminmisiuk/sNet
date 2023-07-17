@@ -1,12 +1,11 @@
 Package: sNet
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Value Mapping and Optimization using Simple Perceptrons
+Version: 0.9
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Benjamin", "Misiuk", , "benjaminmisiuk@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-5822-4574"))
+Description: This package facilitates value mapping between vectors or matrices using simple perceptrons with non-linear activation. A primary application for this is mapping multiple individual model predictions to compositional scales, for example, when predicting grain size composition data. This avoids the use of data transformation and imputation when modelling compositional parameters.
+License: `use_mit_license()`
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2.9000
