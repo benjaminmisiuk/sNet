@@ -1,5 +1,5 @@
 # sNet
-Value mapping and optimization
+Value mapping and optimization using simple perceptrons
 
 This package facilitates the prediction of composition data values using arbitrary non-compositional models. 
 The purpose is to avoid issues associated with transformation, zero values, data imputation, and other challenges when predicting compositional data challenges.
