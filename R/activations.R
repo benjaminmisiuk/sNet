@@ -17,7 +17,7 @@ NULL
 #' @rdname activations
 #' @export
 #' 
-normalize <- function(z){
+linear_norm <- function(z){
   z / sum(z)
 }
 
@@ -31,7 +31,7 @@ softmax <- function(z){
 #' @rdname activations
 #' @export
 #'
-relu <- function(x){
+relu <- function(z){
   sapply(z, FUN=function(z) max(0, z))
 }
 
