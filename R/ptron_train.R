@@ -1,6 +1,6 @@
 #' Train a perceptron matrix mapper
 #' 
-#' A shitty wrapper for [optim], which will evaluate optimization of weights and biases to fit one matrix to another using perceptrons.
+#' A wrapper for [optim], which will evaluate optimization of weights and biases to fit one matrix to another using perceptrons.
 #' 
 #' @details This function optimizes weights and biases of perceptrons to map input matrix `x` to `y`. Perceptrons are densely connected to all inputs and outputs.
 #' 
@@ -36,7 +36,7 @@ ptron_train <- function(x, y, units = ncol(x), method = 'Nelder-Mead', optim_con
 
 #' Train an imperceptron matrix mapper
 #' 
-#' Another shitty wrapper for [optim]. This one optimizes the mapping between two matrices without any interaction between perceptrons until the 
+#' Another wrapper for [optim]. This one optimizes the mapping between two matrices without any interaction between perceptrons until the 
 #' final activation function, if specified.
 #' 
 #' @details Optimize weights and biases of non-dense perceptrons to map input matrix `x` to `y`. There are no dense hidden units.
