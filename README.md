@@ -50,6 +50,14 @@ By definition, compositional data must sum to 100% (or 1). This is the problem w
 apply(rf_pred, 1, sum)
 ```
 
+```
+#     1         2         3         4         5         6         7         8         9        10        11        12        13        14        15        16 
+#1.3316548 1.2342476 1.2376138 1.0717491 1.2171812 1.0556172 1.0839765 1.2380406 1.2084617 1.0749508 1.1345669 1.1639950 1.0869840 1.1178892 1.2661299 1.1174319 
+#       17        18        19        20        21        22        23        24        25        26        27        28        29        30        31        32 
+#1.1078956 1.2320431 1.0616280 1.0381852 1.1087825 1.3107085 1.0897432 1.0403853 0.9110006 1.1641133 0.8953935 1.0558356 1.0855090 0.9049162 1.0815615 1.1488688 
+#...
+```
+
 We can use sNet to optimize the predictions for a compositional distribution by choosing an appropriate activation function. For compositional data, this could be `relu_norm`, `softmax`, or many others. We first must train the optimizer to map inputs to outputs. Provide both an input and target matrix (or columns of a data frame). For our example, this is just the prediction matrix for both input and output (we want to map the predictions to a compositional scale).
 
 ```
@@ -73,6 +81,14 @@ imp_pred <- imptron(rf_pred, act = imp$act, param = imp$opt$par)
 apply(imp_pred, 1, sum)
 ```
 
+```
+#1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 
+#  1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
+# 41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80 
+#  1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
+#...
+```
+
 We can compare the accuracy of the optimized predictions to the raw ones.
 
 ```
@@ -80,7 +96,9 @@ We can compare the accuracy of the optimized predictions to the raw ones.
 ve <- function(ref, pred){
   1 - (sum((ref - pred)^2) / sum((ref - mean(ref))^2))
 }
+```
 
+```
 #accuracy of raw rf predictions
 mean(
   c(
@@ -90,9 +108,13 @@ mean(
     ve(gs$gravel, rf_pred$gravel)
   )
 )
+```
 
+```
 #[1] 0.5241498
+```
 
+```
 #accuracy of optimized predictions
 mean(
   c(
@@ -102,6 +124,8 @@ mean(
     ve(gs$gravel, imp_pred[ ,4])
   )
 )
+```
 
+```
 #[1] 0.5236641
 ```
