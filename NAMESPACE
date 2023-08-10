@@ -3,7 +3,7 @@
 export(imptron)
 export(imptron_train)
 export(leaky_relu)
-export(normalize)
+export(linear_norm)
 export(prelu)
 export(ptron)
 export(ptron_train)

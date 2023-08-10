@@ -2,7 +2,7 @@
 % Please edit documentation in R/activations.R
 \name{activations}
 \alias{activations}
-\alias{normalize}
+\alias{linear_norm}
 \alias{softmax}
 \alias{relu}
 \alias{leaky_relu}
@@ -12,11 +12,11 @@
 \alias{relu_norm}
 \title{Activations}
 \usage{
-normalize(z)
+linear_norm(z)
 
 softmax(z)
 
-relu(x)
+relu(z)
 
 leaky_relu(z, a = 0.01)
 
